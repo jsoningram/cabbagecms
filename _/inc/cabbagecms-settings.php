@@ -154,9 +154,6 @@ function display_cabbagecms_options_page() { // callback function from add_cabba
     submit_button();
  
     echo '</form>';
-    echo '<h3>Social Usage</h3>';
-    echo '<p>Sharing: <code>&lt;?php cabbagecms_share_bar() ?&gt;</code></p>';
-    echo '<p>Connect: <code>&lt;?php cabbagecms_connect() ?&gt;</code></p>';
     echo '</div>';
  
 }
