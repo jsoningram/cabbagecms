@@ -29,8 +29,7 @@ $plugin = plugin_basename(__FILE__);
 
 add_filter("plugin_action_links_$plugin", 'cabbagecms_settings_link' );
 
-add_action( 'init', 'cabbagecms_plugin_updater' );
-function cabbagecms_plugin_updater() {
+function cabbagecms_plugin_updater() { // enable updates from Github - https://github.com/jkudish/WordPress-GitHub-Plugin-Updater
 
 	include_once 'updater.php';
 
@@ -40,7 +39,7 @@ function cabbagecms_plugin_updater() {
 
 		$config = array(
 			'slug' => plugin_basename( __FILE__ ),
-			'proper_folder_name' => 'github-updater',
+			'proper_folder_name' => 'cabbagecms',
 			'api_url' => 'https://api.github.com/repos/jsoningram/cabbagecms',
 			'raw_url' => 'https://raw.github.com/jsoningram/cabbagecms/master',
 			'github_url' => 'https://github.com/jsoningram/cabbagecms',
@@ -57,3 +56,5 @@ function cabbagecms_plugin_updater() {
 	}
 
 }
+
+add_action( 'init', 'cabbagecms_plugin_updater' );
