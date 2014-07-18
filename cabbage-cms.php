@@ -16,7 +16,6 @@ include_once '_/inc/gravityforms-goodies.php';
 include_once '_/inc/pinterest.php';
 include_once '_/inc/social.php';
 include_once '_/inc/contact-fields.php';
-include_once 'updater.php';
 
 function cabbagecms_settings_link($links) { // Add settings link on plugin page
     
