@@ -1,7 +1,5 @@
 #cabbagecms
 
-~Current Version:1.0.1~
-
 ##Usage Instructions
 
 **Sharing:**
@@ -13,6 +11,10 @@ cabbagecms_share_bar();
 ```php
 cabbagecms_connect();
 ```
+
+##Credits
+
+Thanks to [@jkudish](https://github.com/jkudish/WordPress-GitHub-Plugin-Updater) for the updater class
 
 ##Change Log
 
