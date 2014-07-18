@@ -3,19 +3,20 @@
 Plugin Name: CabbageCMS
 Plugin URI: https://bitbucket.org/jsoningram/cabbagecms
 Description: Custom settings for More Cabbage CMS
-Version: 2.2.2
+Version: 1.0
 Author: Jason Ingram
 Author URI: http://morecabbage.com
 */
 
-include '_/inc/cabbagecms-settings.php';
-include '_/inc/analyticstracking.php';
-include '_/inc/email.php';
-include '_/inc/googleplus.php';
-include '_/inc/gravityforms-goodies.php';
-include '_/inc/pinterest.php';
-include '_/inc/social.php';
-include '_/inc/contact-fields.php';
+include_once '_/inc/cabbagecms-settings.php';
+include_once '_/inc/analyticstracking.php';
+include_once '_/inc/email.php';
+include_once '_/inc/googleplus.php';
+include_once '_/inc/gravityforms-goodies.php';
+include_once '_/inc/pinterest.php';
+include_once '_/inc/social.php';
+include_once '_/inc/contact-fields.php';
+include_once 'updater.php';
 
 function cabbagecms_settings_link($links) { // Add settings link on plugin page
     
@@ -29,30 +30,31 @@ $plugin = plugin_basename(__FILE__);
 
 add_filter("plugin_action_links_$plugin", 'cabbagecms_settings_link' );
 
-/*
-function cabbagecms_git_updater() { // connect git plugin updates
-    
-    if ( is_admin() && !class_exists( 'GPU_Controller' ) ) {
-        require_once dirname( __FILE__ ) . '/git-plugin-updates/git-plugin-updates.php';
-        add_action( 'plugins_loaded', 'GPU_Controller::get_instance', 20 );
-    }
-}
+add_action( 'init', 'cabbagecms_plugin_updater' );
+function cabbagecms_plugin_updater() {
 
-add_action( 'plugins_loaded', 'cabbagecms_git_updater' );
-*/
+	include_once 'updater.php';
 
-function cabbagecms_git_updater()
-{
-header('Content-Type: text/plain');
-echo "is_admin, and class_exists( 'GPU_Controller' )\n";
-var_dump(is_admin(), class_exists( 'GPU_Controller' ));
-if ( is_admin() && !class_exists( 'GPU_Controller' ) )
-{
-echo "path and if file exists\n";
-var_dump(dirname( __FILE__ ) . '/git-plugin-updates/git-plugin-updates.php', file_exists(dirname( __FILE__ ) . '/git-plugin-updates/git-plugin-updates.php'));
+	define( 'WP_GITHUB_FORCE_UPDATE', true );
 
-require_once dirname( __FILE__ ) . '/git-plugin-updates/git-plugin-updates.php';
-add_action( 'plugins_loaded', 'GPU_Controller::get_instance', 20 );
-}
-die("\n\nend verbosity");
+	if ( is_admin() ) { // note the use of is_admin() to double check that this is happening in the admin
+
+		$config = array(
+			'slug' => plugin_basename( __FILE__ ),
+			'proper_folder_name' => 'github-updater',
+			'api_url' => 'https://api.github.com/repos/jsoningram/cabbagecms',
+			'raw_url' => 'https://raw.github.com/jsoningram/cabbagecms/master',
+			'github_url' => 'https://github.com/jsoningram/cabbagecms',
+			'zip_url' => 'https://github.com/jsoningram/cabbagecms/archive/master.zip',
+			'sslverify' => true,
+			'requires' => '3.9',
+			'tested' => '3.9',
+			'readme' => 'README.md',
+			'access_token' => '',
+		);
+
+		new WP_GitHub_Updater( $config );
+
+	}
+
 }
