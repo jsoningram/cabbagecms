@@ -37,7 +37,7 @@ function cabbagecms_site_veri_meta() {
   <?php endif;
   
   if ( $cabbagecms_pinterest_site_veri ) : ?>   
-<meta name="p:domain_verify" content="<?php echo $cabbagecms_pinterest_site_veri; ?>"/>   
+<meta name="p:domain_verify" content="<?php echo $cabbagecms_pinterest_site_veri; ?>" />   
   <?php endif;
   
 }
