@@ -49,7 +49,7 @@ echo $curauth->googleplusurl;
 
 ##Credits
 
-Thanks to [@jkudish](https://github.com/jkudish/WordPress-GitHub-Plugin-Updater) for the updater class
+Thanks to [@jkudish](https://github.com/jkudish/WordPress-GitHub-Plugin-Updater) for the Git updater class
 
 ##Change Log
 
