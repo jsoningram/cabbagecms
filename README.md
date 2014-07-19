@@ -1,8 +1,22 @@
 #cabbagecms
 
+Customizes WordPress for More Cabbage clients. Features are:
+
+  * Email obfuscation shortcode
+  * Social sharing and connect bars
+  * Adds more contact methods to user profile
+  * Adds shortcut to Gravity Forms entries
+  * Provides user friendly interface for Google (WT and Analytics), Bing and Pinterest verification
+
 ##Usage  / Instructions
 
 Upload to wp-content/plugins and activate. Edit Settings/CabbageCMS with site info as needed.
+
+**Email:**
+Wrap an email address in the [email] shortcode ex:
+```
+[email]user@example.com[/email]
+```
 
 **Sharing:**
 ```php
