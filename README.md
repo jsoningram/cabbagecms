@@ -53,6 +53,8 @@ Thanks to [@jkudish](https://github.com/jkudish/WordPress-GitHub-Plugin-Updater)
 
 ##Change Log
 
+**1.0.2** Cleaned up the Pinterest meta tag
+
 **1.0.1** Removed usage instructions from settings page
 
 **1.0** Initial Release
