@@ -40,7 +40,7 @@ function cabbagecms_connect() {
 <ul class="social-icons" style="list-style:none;">
     <?php if ($cabbagecms_facebook_yes) : ?><li class="facebook"><a href="<?php echo $cabbagecms_facebook; ?>" class="facebook-icon" target="_blank">Like <?php echo $cabbagecms_company_name; ?> on Facebook</a> </li><?php endif; ?>
     <?php if ($cabbagecms_twitter_yes) : ?><li class="twitter"><a href="<?php echo $cabbagecms_twitter; ?>" class="twitter-icon" target="_blank">Follow <?php echo $cabbagecms_company_name; ?> on Twitter</a> </li><?php endif; ?>
-    <?php if ($cabbagecms_googleplus_yes) : ?><li class="googleplus"><a href="<?php echo $cabbagecms_googleplus; ?>" rel="publisher" class="googleplus-icon" target="_blank">Circle <?php echo $cabbagecms_company_name; ?> on Google+</a> </li><?php endif; ?>
+    <?php if ($cabbagecms_googleplus_yes) : ?><li class="googleplus"><a href="<?php echo $cabbagecms_googleplus; ?>" class="googleplus-icon" target="_blank">Circle <?php echo $cabbagecms_company_name; ?> on Google+</a> </li><?php endif; ?>
     <?php if ($cabbagecms_pinterest_yes) : ?><li class="pinterest"><a href="<?php echo $cabbagecms_pinterest; ?>" class="pinterest-icon" target="_blank">Follow <?php echo $cabbagecms_company_name; ?> on Pinterest</a> </li><?php endif; ?>
     <?php if ($cabbagecms_youtube_yes) : ?><li class="youtube"><a href="<?php echo $cabbagecms_youtube; ?>" class="youtube-icon" target="_blank">Subscribe to <?php echo $cabbagecms_company_name; ?> on YouTube</a> </li><?php endif; ?>
     <?php if ($cabbagecms_instagram_yes) : ?><li class="instagram"><a href="<?php echo $cabbagecms_instagram; ?>" class="instagram-icon" target="_blank">Follow <?php echo $cabbagecms_company_name; ?> on Instagram</a> </li><?php endif; ?>
