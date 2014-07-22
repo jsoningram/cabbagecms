@@ -27,24 +27,17 @@ function cabbagecms_connect() {
     global $cabbagecms_instagram;
     global $cabbagecms_googleplus;
     global $cabbagecms_linkedin;
-    $cabbagecms_facebook_yes = get_option('cabbagecms-facebook');
-    $cabbagecms_twitter_yes = get_option('cabbagecms-twitter');
-    $cabbagecms_youtube_yes = get_option('cabbagecms-youtube');
-    $cabbagecms_pinterest_yes = get_option('cabbagecms-pinterest');
-    $cabbagecms_instagram_yes = get_option('cabbagecms-instagram');
-    $cabbagecms_googleplus_yes = get_option('cabbagecms-googleplus');
-    $cabbagecms_linkedin_yes = get_option('cabbagecms-linkedin');
-    $cabbagecms_company_name_yes = get_option('blogname');
+    $cabbagecms_company_name = get_option('blogname');
     ?>
 
 <ul class="social-icons" style="list-style:none;">
-    <?php if ($cabbagecms_facebook_yes) : ?><li class="facebook"><a href="<?php echo $cabbagecms_facebook; ?>" class="facebook-icon" target="_blank">Like <?php echo $cabbagecms_company_name; ?> on Facebook</a> </li><?php endif; ?>
-    <?php if ($cabbagecms_twitter_yes) : ?><li class="twitter"><a href="<?php echo $cabbagecms_twitter; ?>" class="twitter-icon" target="_blank">Follow <?php echo $cabbagecms_company_name; ?> on Twitter</a> </li><?php endif; ?>
-    <?php if ($cabbagecms_googleplus_yes) : ?><li class="googleplus"><a href="<?php echo $cabbagecms_googleplus; ?>" class="googleplus-icon" target="_blank">Circle <?php echo $cabbagecms_company_name; ?> on Google+</a> </li><?php endif; ?>
-    <?php if ($cabbagecms_pinterest_yes) : ?><li class="pinterest"><a href="<?php echo $cabbagecms_pinterest; ?>" class="pinterest-icon" target="_blank">Follow <?php echo $cabbagecms_company_name; ?> on Pinterest</a> </li><?php endif; ?>
-    <?php if ($cabbagecms_youtube_yes) : ?><li class="youtube"><a href="<?php echo $cabbagecms_youtube; ?>" class="youtube-icon" target="_blank">Subscribe to <?php echo $cabbagecms_company_name; ?> on YouTube</a> </li><?php endif; ?>
-    <?php if ($cabbagecms_instagram_yes) : ?><li class="instagram"><a href="<?php echo $cabbagecms_instagram; ?>" class="instagram-icon" target="_blank">Follow <?php echo $cabbagecms_company_name; ?> on Instagram</a> </li><?php endif; ?>
-    <?php if ($cabbagecms_linkedin_yes) : ?><li class="linkedin"><a href="<?php echo $cabbagecms_linkedin; ?>" class="linkedin-icon" target="_blank">Follow <?php echo $cabbagecms_company_name; ?> on LinkedIn</a> </li><?php endif; ?>
+    <?php if ($cabbagecms_facebook) : ?><li class="facebook"><a href="<?php echo $cabbagecms_facebook; ?>" class="facebook-icon" target="_blank">Like <?php echo $cabbagecms_company_name; ?> on Facebook</a> </li><?php endif; ?>
+    <?php if ($cabbagecms_twitter) : ?><li class="twitter"><a href="<?php echo $cabbagecms_twitter; ?>" class="twitter-icon" target="_blank">Follow <?php echo $cabbagecms_company_name; ?> on Twitter</a> </li><?php endif; ?>
+    <?php if ($cabbagecms_googleplus) : ?><li class="googleplus"><a href="<?php echo $cabbagecms_googleplus; ?>" class="googleplus-icon" target="_blank">Circle <?php echo $cabbagecms_company_name; ?> on Google+</a> </li><?php endif; ?>
+    <?php if ($cabbagecms_pinterest) : ?><li class="pinterest"><a href="<?php echo $cabbagecms_pinterest; ?>" class="pinterest-icon" target="_blank">Follow <?php echo $cabbagecms_company_name; ?> on Pinterest</a> </li><?php endif; ?>
+    <?php if ($cabbagecms_youtube) : ?><li class="youtube"><a href="<?php echo $cabbagecms_youtube; ?>" class="youtube-icon" target="_blank">Subscribe to <?php echo $cabbagecms_company_name; ?> on YouTube</a> </li><?php endif; ?>
+    <?php if ($cabbagecms_instagram) : ?><li class="instagram"><a href="<?php echo $cabbagecms_instagram; ?>" class="instagram-icon" target="_blank">Follow <?php echo $cabbagecms_company_name; ?> on Instagram</a> </li><?php endif; ?>
+    <?php if ($cabbagecms_linkedin) : ?><li class="linkedin"><a href="<?php echo $cabbagecms_linkedin; ?>" class="linkedin-icon" target="_blank">Follow <?php echo $cabbagecms_company_name; ?> on LinkedIn</a> </li><?php endif; ?>
 </ul> <!-- /.social-icons -->
     
 
