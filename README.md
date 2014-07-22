@@ -52,6 +52,7 @@ echo $curauth->googleplusurl;
 Thanks to [@jkudish](https://github.com/jkudish/WordPress-GitHub-Plugin-Updater) for the Git updater class
 
 ##Change Log
+**1.0.3** Bug fixes and change user entry from ID to URL for more flexibilty
 
 **1.0.2** Cleaned up the Pinterest meta tag
 
