@@ -45,7 +45,7 @@ function cabbagecms_google_pub() {
   $cabbagecms_google_pub = get_option('cabbagecms_google_publisher');
   
   if ( $cabbagecms_google_pub ) : ?>   
-<link rel="publisher" href="<?php echo 'http://plus.google.com/' . $cabbagecms_google_pub; ?>" />
+<link rel="publisher" href="<?php echo $cabbagecms_google_pub; ?>" />
   <?php endif;
   
 }

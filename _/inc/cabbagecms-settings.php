@@ -19,26 +19,13 @@ $option_id_ten = 'cabbagecms_bing_site_verification';
 $option_id_eleven = 'cabbagecms_pinterest_site_verification';
 $option_id_twelve = 'cabbagecms_google_publisher';
 
-$cabbagecms_facebook = 'https://www.facebook.com/';
-$cabbagecms_facebook .= get_option('cabbagecms-facebook');
-
-$cabbagecms_twitter = 'https://twitter.com/';
-$cabbagecms_twitter .= get_option('cabbagecms-twitter');
-
-$cabbagecms_youtube = 'https://www.youtube.com/channel/';
-$cabbagecms_youtube .= get_option('cabbagecms-youtube');
-
-$cabbagecms_pinterest = 'http://pinterest.com/';
-$cabbagecms_pinterest .= get_option('cabbagecms-pinterest');
-
-$cabbagecms_instagram = 'http://instagram.com/';
-$cabbagecms_instagram .= get_option('cabbagecms-instagram');
-
-$cabbagecms_googleplus = 'https://plus.google.com/+';
-$cabbagecms_googleplus .= get_option('cabbagecms-googleplus');
-
-$cabbagecms_linkedin = 'https://www.linkedin.com/in/';
-$cabbagecms_linkedin .= get_option('cabbagecms-linkedin');
+$cabbagecms_facebook = get_option('cabbagecms-facebook');
+$cabbagecms_twitter = get_option('cabbagecms-twitter');
+$cabbagecms_youtube = get_option('cabbagecms-youtube');
+$cabbagecms_pinterest = get_option('cabbagecms-pinterest');
+$cabbagecms_instagram = get_option('cabbagecms-instagram');
+$cabbagecms_googleplus = get_option('cabbagecms-googleplus');
+$cabbagecms_linkedin = get_option('cabbagecms-linkedin');
 
 $cabbagecms_options_page = site_url('/wp-admin/options-general.php?page=cabbagecms-options-page');
 
@@ -286,7 +273,7 @@ function cabbagecms_admin_init_google_pub() { // google publisher config
  
     add_settings_field(
         $option_id_twelve, // id
-        'Google Publisher Page ID', // title of field
+        'Google Publisher Page URL', // title of field
         'render_cabbagecms_input_field_google_pub', // callback function
         $menu_page_slug, // page
         'cabbagecms-settings-section-one' // section
@@ -375,7 +362,7 @@ function cabbagecms_admin_init_twitter() { // twitter config
  
     add_settings_field(
         $option_id_two, // id
-        'Twitter ID', // title of field
+        'Twitter URL', // title of field
         'render_cabbagecms_input_field_twitter', // callback function
         $menu_page_slug, // page
         'cabbagecms-settings-section-two' // section
@@ -408,7 +395,7 @@ function cabbagecms_admin_init_googleplus() { // googleplus config
  
     add_settings_field(
         $option_id_three, // id
-        'Google+ ID', // title of field
+        'Google+ URL', // title of field
         'render_cabbagecms_input_field_googleplus', // callback function
         $menu_page_slug, // page
         'cabbagecms-settings-section-two' // section
@@ -441,7 +428,7 @@ function cabbagecms_admin_init_pinterest() { // pinterest config
  
     add_settings_field(
         $option_id_four, // id
-        'Pinterest ID', // title of field
+        'Pinterest URL', // title of field
         'render_cabbagecms_input_field_pinterest', // callback function
         $menu_page_slug, // page
         'cabbagecms-settings-section-two' // section
@@ -474,7 +461,7 @@ function cabbagecms_admin_init_instagram() { // instagram config
  
     add_settings_field(
         $option_id_five, // id
-        'Instagram ID', // title of field
+        'Instagram URL', // title of field
         'render_cabbagecms_input_field_instagram', // callback function
         $menu_page_slug, // page
         'cabbagecms-settings-section-two' // section
@@ -507,7 +494,7 @@ function cabbagecms_admin_init_linkedin() { // linkedin config
  
     add_settings_field(
         $option_id_six, // id
-        'LinkedIn ID', // title of field
+        'LinkedIn URL', // title of field
         'render_cabbagecms_input_field_linkedin', // callback function
         $menu_page_slug, // page
         'cabbagecms-settings-section-two' // section
@@ -540,7 +527,7 @@ function cabbagecms_admin_init_youtube() { // youtube config
  
     add_settings_field(
         $option_id_seven, // id
-        'YouTube ID', // title of field
+        'YouTube URL', // title of field
         'render_cabbagecms_input_field_youtube', // callback function
         $menu_page_slug, // page
         'cabbagecms-settings-section-two' // section
@@ -573,7 +560,7 @@ function cabbagecms_admin_init_facebook() { // facebook config
  
     add_settings_field(
         $option_id_eight, // id
-        'Facebook ID', // title of field
+        'Facebook URL', // title of field
         'render_cabbagecms_input_field_facebook', // callback function
         $menu_page_slug, // page
         'cabbagecms-settings-section-two' // section
