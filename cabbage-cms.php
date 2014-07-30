@@ -3,7 +3,7 @@
 Plugin Name: CabbageCMS
 Plugin URI: https://github.com/jsoningram/cabbagecms
 Description: Custom settings for More Cabbage CMS
-Version: 1.0.3
+Version: 1.0.4
 Author: Jason Ingram
 Author URI: http://morecabbage.com
 */
@@ -16,6 +16,7 @@ include_once '_/inc/gravityforms-goodies.php';
 include_once '_/inc/pinterest.php';
 include_once '_/inc/social.php';
 include_once '_/inc/contact-fields.php';
+
 
 function cabbagecms_settings_link($links) { // Add settings link on plugin page
     
