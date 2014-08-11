@@ -20,13 +20,45 @@ Wrap an email address in the [email] shortcode ex:
 
 **Sharing:**
 ```php
-cabbagecms_share_bar();
+if ( function_exists( 'cabbagecms_connect')) :
+  cabbagecms_share_bar();
+endif;
+```
+If you want a horizontal share bar...
+```css
+.cabbagecms-share li {
+    float: left;
+    margin-right: 10px;
+}
+
+.cabbagecms-share .fb-share {
+    margin: -4px 20px 0 0 !important;
+}
+
+.cabbagecms-share .g-share {
+    width: 70px;
+}
+
+.cabbagecms-share .twitter-share {
+    width: 90px;
+}
+
+.cabbagecms-share .pinterest-share-button {
+    margin-right: 30px !important;
+}
 ```
 
 **Connect:**
 ```php
-cabbagecms_connect();
+if ( function_exists( 'cabbagecms_connect')) :
+  cabbagecms_connect();
+endif;
 ```
+or in an existing social connect bar...
+```php
+echo $cabbagecms_SERVICENAME;
+```
+where SERVICENAME is one of the following: facebook, twitter, youtube, pinterest, googleplus, linkedin, company_name or instagram
 
 **Display author info:**
 before loop...
@@ -52,6 +84,8 @@ echo $curauth->googleplusurl;
 Thanks to [@jkudish](https://github.com/jkudish/WordPress-GitHub-Plugin-Updater) for the Git updater class
 
 ##Change Log
+**1.0.4** Added usage info, helper function to check if page is a child of another and some refactoring, add browser body class.
+
 **1.0.3** Bug fixes and change user entry from ID to URL for more flexibilty
 
 **1.0.2** Cleaned up the Pinterest meta tag

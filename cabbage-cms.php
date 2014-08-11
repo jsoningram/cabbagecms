@@ -6,6 +6,7 @@ Description: Custom settings for More Cabbage CMS
 Version: 1.0.4
 Author: Jason Ingram
 Author URI: http://morecabbage.com
+License: GPL2
 */
 
 include_once '_/inc/cabbagecms-settings.php';
@@ -16,6 +17,7 @@ include_once '_/inc/gravityforms-goodies.php';
 include_once '_/inc/pinterest.php';
 include_once '_/inc/social.php';
 include_once '_/inc/contact-fields.php';
+include_once '_/inc/browser-body-class.php';
 
 
 function cabbagecms_settings_link($links) { // Add settings link on plugin page

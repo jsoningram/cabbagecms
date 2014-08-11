@@ -12,7 +12,7 @@ function cabbagecms_share_bar() {
     <li class="g-share"><g:plusone size="medium" href="<?php the_permalink(); ?>?ref=googleplus"></g:plusone></li>
     <li class="fb-share"><div class="fb-like" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false"></div></li>
     <li class="twitter-share"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-url="<?php echo wp_get_shortlink(); ?>&ref=t" data-counturl="<?php the_permalink(); ?>" data-via="<?php echo get_option('cabbagecms-twitter'); ?>">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
-    <li><a class="pin-it-button" href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink($post->ID).'?ref=pinterest'); ?>&media=<?php echo $pinterestimage[0]; ?>&description=<?php echo $pindetails; ?>">Pin It</a></li><!-- end pinit -->
+    <li class="pinterest-share-button"><a class="pin-it-button" href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink($post->ID).'?ref=pinterest'); ?>&media=<?php echo $pinterestimage[0]; ?>&description=<?php echo $pindetails; ?>">Pin It</a></li><!-- end pinit -->
     <li><script src="//platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/Share" data-counter="right" data-url="<?php echo get_permalink($post-ID); ?>?ref=linkedin"></script></li>
 </ul> <!-- /.share -->
 

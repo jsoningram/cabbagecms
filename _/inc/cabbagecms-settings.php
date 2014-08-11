@@ -123,7 +123,7 @@ function add_cabbagecms_options_page() { // add the page to the admin menu
         'CabbageCMS', // menu title
         'manage_options', // capability - who can see this menu
         $menu_page_slug, // menu slug
-        'display_cabbagecms_options_page' // callback function to be called to output the content for this page:31
+        'display_cabbagecms_options_page' // callback function to be called to output the content for this page
     );
 
 }
