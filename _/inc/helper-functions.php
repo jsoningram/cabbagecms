@@ -10,3 +10,6 @@ function cabbagecms_is_child($pageID) {
 			   return false; 
 	endif;
 }
+
+// allow shortcodes in text widget
+add_filter( 'widget_text', 'do_shortcode' );
