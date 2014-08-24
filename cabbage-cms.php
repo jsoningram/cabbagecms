@@ -18,7 +18,7 @@ include_once '_/inc/pinterest.php';
 include_once '_/inc/social.php';
 include_once '_/inc/contact-fields.php';
 include_once '_/inc/browser-body-class.php';
-
+include_once '_/inc/helper-functions.php';
 
 function cabbagecms_settings_link($links) { // Add settings link on plugin page
     
