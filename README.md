@@ -56,6 +56,7 @@ endif;
 ```
 or in an existing social connect bar...
 ```php
+global $cabbagecms_SERVICENAME;
 echo $cabbagecms_SERVICENAME;
 ```
 where SERVICENAME is one of the following: facebook, twitter, youtube, pinterest, googleplus, linkedin, company_name or instagram
@@ -83,8 +84,10 @@ echo $curauth->googleplusurl;
 
 Thanks to [@jkudish](https://github.com/jkudish/WordPress-GitHub-Plugin-Updater) for the Git updater class
 
+Thanks to [@serbanghita](https://github.com/serbanghita/Mobile-Detect) for the Mobile_Detect class
+
 ##Change Log
-**1.0.4** Added usage info, helper function to check if page is a child of another and some refactoring, add browser body class.
+**1.0.4** Added usage info, helper functions, some refactoring, added browser body class, mobile detect class
 
 **1.0.3** Bug fixes and change user entry from ID to URL for more flexibilty
 
