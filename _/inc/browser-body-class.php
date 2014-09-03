@@ -51,7 +51,7 @@ function cabbagecms_browser_body_class($classes) {
         $classesh_version = 'ch' . str_replace( '.', '-', $matches[1] );
         $classes[] = $classesh_version;
 
-    } elseif ( preg_match( "/Safari/", $browser ) ) {
+    } elseif ( preg_match( "/Safari/", $browser ) && !preg_match( "/Chrome/", $browser ) ) {
         $classes[] = 'safari';
 
         preg_match( "/Version\/(\d.\d)/si", $browser, $matches);
