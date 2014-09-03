@@ -87,6 +87,8 @@ Thanks to [@jkudish](https://github.com/jkudish/WordPress-GitHub-Plugin-Updater)
 Thanks to [@serbanghita](https://github.com/serbanghita/Mobile-Detect) for the Mobile_Detect class
 
 ##Change Log
+**1.0.5** Fixed issue where Chrome was getting safari class
+
 **1.0.4** Added usage info, helper functions, some refactoring, added browser body class, mobile detect class
 
 **1.0.3** Bug fixes and change user entry from ID to URL for more flexibilty
