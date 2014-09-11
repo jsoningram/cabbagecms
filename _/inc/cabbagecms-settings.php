@@ -627,7 +627,7 @@ function render_cabbagecms_input_field_pinterestjs() {
     if(get_option( $option_id_thirteen )) :
         $input = get_option( $option_id_thirteen );
     else :
-        $input = '0';
+        $input = '1';
     endif;
 
     echo '<input type="text" id="' . $option_id_thirteen . '" name="' . $option_id_thirteen . '" value="' . $input . '" />';
@@ -666,7 +666,7 @@ function render_cabbagecms_input_field_googleplusjs() {
     if(get_option( $option_id_fourteen )) :
         $input = get_option( $option_id_fourteen );
     else :
-        $input = '0';
+        $input = '1';
     endif;
 
     echo '<input type="text" id="' . $option_id_fourteen . '" name="' . $option_id_fourteen . '" value="' . $input . '" />';
