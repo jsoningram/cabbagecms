@@ -20,6 +20,8 @@ $option_id_nine = 'cabbagecms_google_site_verification';
 $option_id_ten = 'cabbagecms_bing_site_verification';
 $option_id_eleven = 'cabbagecms_pinterest_site_verification';
 $option_id_twelve = 'cabbagecms_google_publisher';
+$option_id_thirteen = 'pinterest_js';
+$option_id_fourteen = 'googleplus_js';
 
 $cabbagecms_facebook = get_option('cabbagecms-facebook');
 $cabbagecms_twitter = get_option('cabbagecms-twitter');
@@ -30,6 +32,10 @@ $cabbagecms_googleplus = get_option('cabbagecms-googleplus');
 $cabbagecms_linkedin = get_option('cabbagecms-linkedin');
 
 $cabbagecms_company_name = get_option('blogname');
+
+// booleans
+$pinterest_js = get_option('pinterest_js');
+$googleplus_js = get_option('googleplus_js');
 
 $cabbagecms_options_page = site_url('/wp-admin/options-general.php?page=cabbagecms-options-page');
 
@@ -588,3 +594,81 @@ function render_cabbagecms_input_field_facebook() {
     echo '<input type="text" id="' . $option_id_eight . '" name="' . $option_id_eight . '" value="' . $input . '" />';
 
 } // end facebook config
+
+function cabbagecms_admin_init_pinterestjs() { // include pinterest option
+
+    global $group_name;
+    global $menu_page_slug;
+    global $option_id_thirteen;
+
+    add_settings_field(
+        $option_id_thirteen, // id
+        'Include Pinterest JS?', // title of field
+        'render_cabbagecms_input_field_pinterestjs', // callback function
+        $menu_page_slug, // page
+        'cabbagecms-settings-section-two' // section
+    );
+
+    register_setting(
+        $group_name, // group name
+        $option_id_thirteen, // name of an option to sanitize and save.
+        'esc_attr' // callback function that sanitizes the option's value
+    );
+
+}
+add_action( 'admin_init', 'cabbagecms_admin_init_pinterestjs' );
+
+
+function render_cabbagecms_input_field_pinterestjs() {
+
+    global $option_id_thirteen;
+
+    // set default value if none is entered
+    if(get_option( $option_id_thirteen )) :
+        $input = get_option( $option_id_thirteen );
+    else :
+        $input = '0';
+    endif;
+
+    echo '<input type="text" id="' . $option_id_thirteen . '" name="' . $option_id_thirteen . '" value="' . $input . '" />';
+
+} // end include pinterest option
+
+function cabbagecms_admin_init_googleplusjs() { // include googleplus option
+
+    global $group_name;
+    global $menu_page_slug;
+    global $option_id_fourteen;
+
+    add_settings_field(
+        $option_id_fourteen, // id
+        'Include Googleplus JS?', // title of field
+        'render_cabbagecms_input_field_googleplusjs', // callback function
+        $menu_page_slug, // page
+        'cabbagecms-settings-section-two' // section
+    );
+
+    register_setting(
+        $group_name, // group name
+        $option_id_fourteen, // name of an option to sanitize and save.
+        'esc_attr' // callback function that sanitizes the option's value
+    );
+
+}
+add_action( 'admin_init', 'cabbagecms_admin_init_googleplusjs' );
+
+
+function render_cabbagecms_input_field_googleplusjs() {
+
+    global $option_id_fourteen;
+
+    // set default value if none is entered
+    if(get_option( $option_id_fourteen )) :
+        $input = get_option( $option_id_fourteen );
+    else :
+        $input = '0';
+    endif;
+
+    echo '<input type="text" id="' . $option_id_fourteen . '" name="' . $option_id_fourteen . '" value="' . $input . '" />';
+
+} // end include googleplus option

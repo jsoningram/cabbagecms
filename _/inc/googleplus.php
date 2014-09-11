@@ -1,6 +1,10 @@
 <?php												
 
-function cabbagecms_googleplus_button() { ?>
+function cabbagecms_googleplus_button() { 
+
+	global $googleplus_js;
+
+    if ($googleplus_js === 'true' || $googleplus_js === 'yes' || $googleplus_js === '1') : ?>
 		
 	<!-- Google+ -->
 	<script type="text/javascript">
@@ -11,7 +15,7 @@ function cabbagecms_googleplus_button() { ?>
             })();
 	</script>
 	
-<?php }
+<?php endif; }
 
 add_action('wp_footer', 'cabbagecms_googleplus_button');
 

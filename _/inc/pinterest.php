@@ -1,6 +1,10 @@
 <?php												
 
-function cabbagecms_pinterest_js() { ?>
+function cabbagecms_pinterest_js() { 
+    
+    global $pinterest_js;
+
+    if ($pinterest_js === 'true' || $pinterest_js === 'yes' || $pinterest_js === '1') : ?>
 
     <!-- Pinterest widget -->
     <script type="text/javascript">
@@ -13,6 +17,6 @@ function cabbagecms_pinterest_js() { ?>
         }(document));
     </script>
     
-<?php }
+<?php endif; }
 
 add_action('wp_footer', 'cabbagecms_pinterest_js');
