@@ -20,7 +20,7 @@ Wrap an email address in the [email] shortcode ex:
 
 **Sharing:**
 ```php
-if ( function_exists( 'cabbagecms_connect')) :
+if ( function_exists( 'cabbagecms_share_bar')) :
   cabbagecms_share_bar();
 endif;
 ```
