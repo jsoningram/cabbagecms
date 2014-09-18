@@ -624,7 +624,7 @@ function render_cabbagecms_input_field_pinterestjs() {
     global $option_id_thirteen;
 
     // set default value if none is entered
-    if(get_option( $option_id_thirteen )) :
+    if(empty(get_option( $option_id_thirteen ))) :
         $input = get_option( $option_id_thirteen );
     else :
         $input = '1';
@@ -663,7 +663,7 @@ function render_cabbagecms_input_field_googleplusjs() {
     global $option_id_fourteen;
 
     // set default value if none is entered
-    if(get_option( $option_id_fourteen )) :
+    if(empty(get_option( $option_id_fourteen ))) :
         $input = get_option( $option_id_fourteen );
     else :
         $input = '1';
