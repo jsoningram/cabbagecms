@@ -79,7 +79,7 @@ add_action('wp_enqueue_scripts', 'cabbagecms_styles_inject');
 
 function cabbagecms_admin_css() { // enqueue styles for admin
 
-	wp_enqueue_style( 'cabbagecms_admin_css', plugins_url('../css/cabbagecms_admin.css', __FILE__ ) );
+    wp_enqueue_style( 'cabbagecms_admin_css', plugins_url('../css/cabbagecms_admin.css', __FILE__ ) );
 }
 add_action('admin_print_styles', 'cabbagecms_admin_css' );
 
@@ -90,9 +90,9 @@ function cabbagecms_admin_bar_cabbagecms() { // add admin menu item
     global $wp_admin_bar;
     global $cabbagecms_options_page;
     $wp_admin_bar->add_menu(array(
-	'id' => 'wp-admin-bar-cabbagecms',
-	'title' => __('CabbageCMS Options'),
-	'href' => $cabbagecms_options_page
+    'id' => 'wp-admin-bar-cabbagecms',
+    'title' => __('CabbageCMS Options'),
+    'href' => $cabbagecms_options_page
     ));
 }
 add_action('wp_before_admin_bar_render', 'cabbagecms_admin_bar_cabbagecms');
@@ -624,7 +624,7 @@ function render_cabbagecms_input_field_pinterestjs() {
     global $option_id_thirteen;
 
     // set default value if none is entered
-    if(empty(get_option( $option_id_thirteen ))) :
+    if(empty($pinterest_js)) :
         $input = get_option( $option_id_thirteen );
     else :
         $input = '1';
@@ -663,7 +663,7 @@ function render_cabbagecms_input_field_googleplusjs() {
     global $option_id_fourteen;
 
     // set default value if none is entered
-    if(empty(get_option( $option_id_fourteen ))) :
+    if(empty($googleplus_js)) :
         $input = get_option( $option_id_fourteen );
     else :
         $input = '1';
