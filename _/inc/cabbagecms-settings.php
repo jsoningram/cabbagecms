@@ -73,13 +73,13 @@ add_action('login_head', 'cabbagecms_login_logo');
 
 function cabbagecms_styles_inject() { // Add styles for social
 
-wp_enqueue_style( 'cabbagecms_connect_css', plugins_url('../css/cabbagecms_connect.css', __FILE__ ) );
+wp_enqueue_style( 'cabbagecms_connect_css', plugins_url('../css/cabbagecms_connect.css', __FILE__ ), array(), '1.0', 'all' );
 }
 add_action('wp_enqueue_scripts', 'cabbagecms_styles_inject');
 
 function cabbagecms_admin_css() { // enqueue styles for admin
 
-    wp_enqueue_style( 'cabbagecms_admin_css', plugins_url('../css/cabbagecms_admin.css', __FILE__ ) );
+    wp_enqueue_style( 'cabbagecms_admin_css', plugins_url('../css/cabbagecms_admin.css', __FILE__ ), array(), '1.0', 'all' );
 }
 add_action('admin_print_styles', 'cabbagecms_admin_css' );
 
@@ -87,8 +87,7 @@ add_action('admin_print_styles', 'cabbagecms_admin_css' );
 
 function cabbagecms_admin_bar_cabbagecms() { // add admin menu item
 
-    global $wp_admin_bar;
-    global $cabbagecms_options_page;
+    global $wp_admin_bar, $cabbagecms_options_page;
     $wp_admin_bar->add_menu(array(
     'id' => 'wp-admin-bar-cabbagecms',
     'title' => __('CabbageCMS Options'),
@@ -121,8 +120,7 @@ add_action('wp_dashboard_setup', 'cabbagecms_register_widget');
 
 function add_cabbagecms_options_page() { // add the page to the admin menu
 
-    global $menu_page_slug;
-    global $page_title;
+    global $menu_page_slug, $page_title;
 
     add_options_page(
         $page_title, // page title
@@ -137,9 +135,7 @@ add_action( 'admin_menu', 'add_cabbagecms_options_page' );
 
 function display_cabbagecms_options_page() { // callback function from add_cabbagecms_options_page()
 
-    global $group_name;
-    global $menu_page_slug;
-    global $page_title;
+    global $group_name, $menu_page_slug, $page_title;
 
     echo '<div class="wrap">';
     echo '<h2>' . $page_title . '</h2>';
@@ -157,8 +153,7 @@ function display_cabbagecms_options_page() { // callback function from add_cabba
 
 function cabbagecms_admin_init_google() { // Google Analytics and WT
 
-    global $group_name;
-    global $menu_page_slug;
+    global $group_name, $menu_page_slug;
 
     add_settings_section(
         'cabbagecms-settings-section-one', // section
@@ -178,8 +173,7 @@ function display_cabbagecms_settings_message_google() { // callback function for
 
 function cabbagecms_admin_init_ga() { // GA config
 
-    global $group_name;
-    global $menu_page_slug;
+    global $group_name, $menu_page_slug;
     global $option_id_one;
 
     add_settings_field(
@@ -211,8 +205,7 @@ function render_cabbagecms_input_field_ga() {
 
 function cabbagecms_admin_init_wt() { // WT config
 
-    global $group_name;
-    global $menu_page_slug;
+    global $group_name, $menu_page_slug;
     global $option_id_nine;
 
     add_settings_field(
@@ -244,8 +237,7 @@ function render_cabbagecms_input_field_wt() {
 
 function cabbagecms_admin_init_bing() { // bing config
 
-    global $group_name;
-    global $menu_page_slug;
+    global $group_name, $menu_page_slug;
     global $option_id_ten;
 
     add_settings_field(
@@ -277,8 +269,7 @@ function render_cabbagecms_input_field_bing() {
 
 function cabbagecms_admin_init_google_pub() { // google publisher config
 
-    global $group_name;
-    global $menu_page_slug;
+    global $group_name, $menu_page_slug;
     global $option_id_twelve;
 
     add_settings_field(
@@ -310,8 +301,7 @@ function render_cabbagecms_input_field_google_pub() {
 
 function cabbagecms_admin_init_pinterest_veri() { // pinterest config
 
-    global $group_name;
-    global $menu_page_slug;
+    global $group_name, $menu_page_slug;
     global $option_id_eleven;
 
     add_settings_field(
@@ -345,8 +335,7 @@ function render_cabbagecms_input_field_pinterest_veri() {
 
 function cabbagecms_admin_init_social_networks() { // social networks section
 
-    global $group_name;
-    global $menu_page_slug;
+    global $group_name, $menu_page_slug;
 
     add_settings_section(
         'cabbagecms-settings-section-two', // section
@@ -366,8 +355,7 @@ function display_cabbagecms_settings_message_social_networks() { // callback fun
 
 function cabbagecms_admin_init_twitter() { // twitter config
 
-    global $group_name;
-    global $menu_page_slug;
+    global $group_name, $menu_page_slug;
     global $option_id_two;
 
     add_settings_field(
@@ -399,8 +387,7 @@ function render_cabbagecms_input_field_twitter() {
 
 function cabbagecms_admin_init_googleplus() { // googleplus config
 
-    global $group_name;
-    global $menu_page_slug;
+    global $group_name, $menu_page_slug;
     global $option_id_three;
 
     add_settings_field(
@@ -432,8 +419,7 @@ function render_cabbagecms_input_field_googleplus() {
 
 function cabbagecms_admin_init_pinterest() { // pinterest config
 
-    global $group_name;
-    global $menu_page_slug;
+    global $group_name, $menu_page_slug;
     global $option_id_four;
 
     add_settings_field(
@@ -465,8 +451,7 @@ function render_cabbagecms_input_field_pinterest() {
 
 function cabbagecms_admin_init_instagram() { // instagram config
 
-    global $group_name;
-    global $menu_page_slug;
+    global $group_name, $menu_page_slug;
     global $option_id_five;
 
     add_settings_field(
@@ -498,8 +483,7 @@ function render_cabbagecms_input_field_instagram() {
 
 function cabbagecms_admin_init_linkedin() { // linkedin config
 
-    global $group_name;
-    global $menu_page_slug;
+    global $group_name, $menu_page_slug;
     global $option_id_six;
 
     add_settings_field(
@@ -531,8 +515,7 @@ function render_cabbagecms_input_field_linkedin() {
 
 function cabbagecms_admin_init_youtube() { // youtube config
 
-    global $group_name;
-    global $menu_page_slug;
+    global $group_name, $menu_page_slug;
     global $option_id_seven;
 
     add_settings_field(
@@ -564,8 +547,7 @@ function render_cabbagecms_input_field_youtube() {
 
 function cabbagecms_admin_init_facebook() { // facebook config
 
-    global $group_name;
-    global $menu_page_slug;
+    global $group_name, $menu_page_slug;
     global $option_id_eight;
 
     add_settings_field(
@@ -597,8 +579,7 @@ function render_cabbagecms_input_field_facebook() {
 
 function cabbagecms_admin_init_pinterestjs() { // include pinterest option
 
-    global $group_name;
-    global $menu_page_slug;
+    global $group_name, $menu_page_slug;
     global $option_id_thirteen;
 
     add_settings_field(
@@ -636,8 +617,7 @@ function render_cabbagecms_input_field_pinterestjs() {
 
 function cabbagecms_admin_init_googleplusjs() { // include googleplus option
 
-    global $group_name;
-    global $menu_page_slug;
+    global $group_name, $menu_page_slug;
     global $option_id_fourteen;
 
     add_settings_field(

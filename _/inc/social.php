@@ -13,21 +13,14 @@ function cabbagecms_share_bar() {
     <li class="fb-share"><div class="fb-like" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false"></div></li>
     <li class="twitter-share"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-url="<?php echo wp_get_shortlink(); ?>&ref=t" data-counturl="<?php the_permalink(); ?>" data-via="<?php echo get_option('cabbagecms-twitter'); ?>">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script></li>
     <li class="pinterest-share-button"><a class="pin-it-button" href="//pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink($post->ID).'?ref=pinterest'); ?>&media=<?php echo $pinterestimage[0]; ?>&description=<?php echo $pindetails; ?>">Pin It</a></li><!-- end pinit -->
-    <li><script src="//platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/Share" data-counter="right" data-url="<?php echo get_permalink($post-ID); ?>?ref=linkedin"></script></li>
+    <li class="linkedin-button"><script src="//platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/Share" data-counter="right" data-url="<?php echo get_permalink($post-ID); ?>?ref=linkedin"></script></li>
 </ul> <!-- /.share -->
 
 <?php }
 
 function cabbagecms_connect() {
 
-    global $cabbagecms_facebook;
-    global $cabbagecms_twitter;
-    global $cabbagecms_youtube;
-    global $cabbagecms_pinterest;
-    global $cabbagecms_instagram;
-    global $cabbagecms_googleplus;
-    global $cabbagecms_linkedin;
-    global $cabbagecms_company_name;
+    global $cabbagecms_facebook, $cabbagecms_twitter, $cabbagecms_youtube, $cabbagecms_pinterest, $cabbagecms_instagram, $cabbagecms_googleplus, $cabbagecms_linkedin, $cabbagecms_company_name;
     ?>
 
 <ul class="cabbagecms-social-icons" style="list-style:none;">
