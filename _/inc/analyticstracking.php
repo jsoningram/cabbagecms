@@ -1,6 +1,6 @@
 <?php												
 
-function cabbagecms_analytics_footer_inject() {
+function cabbagecms_analytics_header_inject() {
   
   $cabbagecms_analytics_id = get_option('cabbagecms-google-analytics');
   
@@ -20,7 +20,7 @@ function cabbagecms_analytics_footer_inject() {
     
 <?php endif; }
 
-add_action('wp_footer', 'cabbagecms_analytics_footer_inject');
+add_action('wp_head', 'cabbagecms_analytics_header_inject');
 
 function cabbagecms_site_veri_meta() {
   

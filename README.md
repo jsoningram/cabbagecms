@@ -87,6 +87,8 @@ Thanks to [@jkudish](https://github.com/jkudish/WordPress-GitHub-Plugin-Updater)
 Thanks to [@serbanghita](https://github.com/serbanghita/Mobile-Detect) for the Mobile_Detect class
 
 ##Change Log
+**1.0.8** Move Google Analytis to head
+
 **1.0.7** Add version number to stylesheets
 
 **1.0.6** Fixed bug that prevented option from being changed
