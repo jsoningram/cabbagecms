@@ -48,8 +48,10 @@ function cabbagecms_browser_body_class($classes) {
         $classes[] = 'chrome';
 
         preg_match( "/Chrome\/(\d.\d)/si", $browser, $matches);
-        $classesh_version = 'ch' . str_replace( '.', '-', $matches[1] );
-        $classes[] = $classesh_version;
+        if ($matches) {
+            $classesh_version = 'ch' . str_replace( '.', '-', $matches[1] ); 
+            $classes[] = $classesh_version;
+        }
 
     } elseif ( preg_match( "/Safari/", $browser ) && !preg_match( "/Chrome/", $browser ) ) {
         $classes[] = 'safari';
