@@ -3,7 +3,7 @@
 Plugin Name: CabbageCMS
 Plugin URI: https://github.com/jsoningram/cabbagecms
 Description: Custom settings for More Cabbage CMS
-Version: 1.1.0
+Version: 1.1.1
 Author: Jason Ingram
 Author URI: http://morecabbage.com
 License: GPL2
